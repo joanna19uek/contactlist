@@ -9,7 +9,7 @@ function onDeviceReady() {
 function displayContacts(contacts) {
     for (var i=0; i<contacts.length; i++) {
         var p = document.createElement("p");
-        p.createTextNode(contacts[i].displayName + '</br>' + contacts[i].phoneNumbers[0]);
+        p.appendChild(document.createTextNode('' + contacts[i].displayName + '<br/>' + contacts[i].phoneNumbers[0]));
         document.getElementById("list").appendChild(p);
     }
 }
